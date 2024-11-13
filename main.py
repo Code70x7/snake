@@ -1,5 +1,6 @@
-from turtle import Screen, Turtle
+from turtle import Screen
 from snake import Snake
+from food import Food
 import time
 
 screen = Screen()
@@ -10,6 +11,8 @@ screen.tracer(0)
 
 #Creates the snake
 snake = Snake()
+#Creates Food class
+food = Food()
 
 #need to bind the onkey to the snake
 screen.listen()
