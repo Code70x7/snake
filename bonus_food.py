@@ -1,15 +1,14 @@
+# bonus_food.py
 from turtle import Turtle
 import random
 
-
-class Food(Turtle):
-    #making the size and color of the food pellet
+class BonusFood(Turtle):
     def __init__(self):
         super().__init__()
         self.shape("circle")
         self.penup()
-        self.shapesize(stretch_len=0.7, stretch_wid=0.7)
-        self.color("blue")
+        self.shapesize(stretch_len=0.3, stretch_wid=0.3)  # Smaller size than regular food
+        self.color("green")
         self.speed("fastest")
         self.refresh()
 
