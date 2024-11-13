@@ -1,6 +1,9 @@
 from turtle import Turtle
+# Define constants for the starting positions of the snake and movement settings
+
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
-MOVE_DISTANCE = 20
+MOVE_DISTANCE = 20 # Distance the snake moves each time
+# Angle for moving up/down/left/right
 UP = 90
 DOWN = 270
 LEFT = 180
@@ -10,9 +13,9 @@ RIGHT = 0
 class Snake:
 
     def __init__(self):
-        self.segments = []
-        self.create_snake()
-        self.head = self.segments[0]
+        self.segments = [] # List to hold all segments of the snake
+        self.create_snake() # Create the snake body using the starting positions
+        self.head = self.segments[0] # Set the first segment (head) of the snake
 
     def create_snake(self):
         #creates snake body
@@ -31,6 +34,8 @@ class Snake:
         self.add_segment(self.segments[-1].position())
 
     def move(self):
+                # Move the snake by updating the position of each segment
+
         for seg_num in range(len(self.segments) - 1, 0, -1):
             #moves snake forward- tail follows where head is going
 
